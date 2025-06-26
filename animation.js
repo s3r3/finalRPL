@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Aktifkan ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
-  
 
   // Animasi untuk navbar
   gsap.from(".bg-white", {
@@ -45,19 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  gsap.from(".menu-items", {
-    duration: 1,
-    opacity: 0,
-    y: 50,
-    ease: "back.out(1.7)",
-    delay: 0.3,
-    scrollTrigger: {  
-      trigger: ".menu-items",
-      start: "top top",
-
-      toggleActions: "play none none restart",
-    },
-  });
+ 
 
   gsap.from(".search-container", {
     duration: 1,
@@ -89,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Animasi untuk hero section
- gsap.from(".hero-text-1", {
+  gsap.from(".hero-text-1", {
     duration: 1.5,
     opacity: 0,
     y: -100,
@@ -98,8 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: ".hero-text-1",
       start: "top 80%",
-      toggleActions: "play none none reverse"
-    }
+      toggleActions: "play none none reverse",
+    },
   });
 
   gsap.from(".hero-text-2", {
@@ -120,8 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: ".order-button",
       start: "top 80%",
-      toggleActions: "play none none reverse"
-    }
+      toggleActions: "play none none reverse",
+    },
   });
 
   gsap.from(".roast-chicken", {
@@ -133,8 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: ".roast-chicken",
       start: "top 80%",
-      toggleActions: "play none none reverse"
-    }
+      toggleActions: "play none none reverse",
+    },
   });
 
   gsap.from(".chilli-1", {
@@ -146,8 +133,8 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: ".chilli-1",
       start: "top 80%",
-      toggleActions: "play none none reverse"
-    }
+      toggleActions: "play none none reverse",
+    },
   });
 
   gsap.from(".chilli-2", {
@@ -159,8 +146,8 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: ".chilli-2",
       start: "top 80%",
-      toggleActions: "play none none reverse"
-    }
+      toggleActions: "play none none reverse",
+    },
   });
 
   // Animasi untuk kategori khusus
@@ -172,8 +159,8 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: ".categories-section h2",
       start: "top center",
-      toggleActions: "play none none reverse"
-    }
+      toggleActions: "play none none reverse",
+    },
   });
 
   gsap.from(".category-card", {
@@ -190,66 +177,91 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // ... existing animations ...
 
-// Daily Best Sells Section Animations
-gsap.from(".daily-best-title", {
+  // Daily Best Sells Section Animations
+  gsap.from(".daily-best-title", {
+    duration: 1,
+    opacity: 0,
+    x: -100,
+    ease: "elastic.out(1, 0.5)",
+    scrollTrigger: {
+      trigger: ".animate-section",
+      start: "top 80%",
+    },
+  });
+
+  gsap.from(".filter-btn", {
+    duration: 0.8,
+    opacity: 0,
+    y: 30,
+    stagger: 0.1,
+    ease: "back.out(4)",
+    scrollTrigger: {
+      trigger: ".filter-buttons",
+      start: "top 80%",
+    },
+  });
+
+  gsap.from(".product-card", {
+    duration: 1,
+
+    y: 50,
+    rotation: 5,
+    stagger: {
+      amount: 0.4,
+      from: "end",
+    },
+    ease: "back.out(2)",
+    scrollTrigger: {
+      trigger: ".product-cards-container",
+      start: "top 80%",
+    },
+  });
+  // Animasi untuk hero section
+  gsap.from(".animate-navigasi > div", {
+    duration: 1.2,
+    opacity: 0,
+    y: -100,
+    ease: "bounce.out",
+    delay: 0.5,
+    scrollTrigger: {
+      trigger: ".animate-navigasi",
+      start: "top 50%",
+      toggleActions: "play none none start",
+    },
+  });
+  gsap.from(".animate-card ", {
   duration: 1,
   opacity: 0,
-  x: -100,
-  ease: "elastic.out(1, 0.5)",
+  x: -200,
+  ease: "back.out(1.7)",
+  stagger: 0.2,
   scrollTrigger: {
-    trigger: ".animate-section",
+    trigger: ".animate-card",
     start: "top 80%",
-  }
-});
-
-gsap.from(".filter-btn", {
-  duration: 0.8,
-  opacity: 0,
-  y: 30,
-  stagger: 0.1,
-  ease: "back.out(4)",
-  scrollTrigger: {
-    trigger: ".filter-buttons",
-    start: "top 80%",
-  }
-});
-
-gsap.from(".product-card", {
-  duration: 1,
-  
-  y: 50,
-  rotation: 5,
-  stagger: {
-    amount: 0.4,
-    from: "end"
+    toggleActions: "play none none start",
   },
-  ease: "back.out(2)",
-  scrollTrigger: {
-    trigger: ".product-cards-container",
-    start: "top 80%",
-  }
 });
 
-// Hover effects
-document.querySelectorAll(".product-card").forEach(card => {
-  card.addEventListener("mouseenter", () => {
-    gsap.to(card, {
-      scale: 1.03,
-      y: -5,
-      boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1)",
-      duration: 0.3
+
+
+  // Hover effects
+  document.querySelectorAll(".product-card").forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, {
+        scale: 1.03,
+        y: -5,
+        boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1)",
+        duration: 0.3,
+      });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, {
+        scale: 1,
+        y: 0,
+        boxShadow: "0 1px 3px 0 rgba(0,0,0,0.1)",
+        duration: 0.3,
+      });
     });
   });
-  
-  card.addEventListener("mouseleave", () => {
-    gsap.to(card, {
-      scale: 1, 
-      y: 0,
-      boxShadow: "0 1px 3px 0 rgba(0,0,0,0.1)",
-      duration: 0.3
-    });
-  });
 });
-});
-
-
