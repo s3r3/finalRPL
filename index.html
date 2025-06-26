@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#23180d]">
+    <!-- Navbar -->
+    <nav class="bg-white shadow flex items-center px-6 py-2 justify-between">
+      <div class="flex items-center gap-4">
+        <button class="text-2xl md:hidden"><i class="fa fa-bars"></i></button>
+        <img
+          src="https://i.ibb.co/3y7Qw1K/foodzy-logo.png"
+          alt="Logo"
+          class="w-12 h-12 rounded-full"
+        />
+        <div>
+          <div class="font-bold text-lg">Foodzy</div>
+          <div class="text-xs text-gray-500 -mt-1">A Treasure of Tastes</div>
+        </div>
+      </div>
+      <div
+        class="hidden md:flex gap-6 items-center flex-1 justify-center menu-items"
+      >
+        <a
+          href="#"
+          class="menu-item font-semibold text-sm hover:text-yellow-600"
+          >Home</a
+        >
+        <div class="relative group">
+          <button
+            class="menu-item font-semibold text-sm flex items-center gap-1 hover:text-yellow-600"
+          >
+            Category <i class="fa fa-chevron-down text-xs"></i>
+          </button>
+        </div>
+        <a
+          href="#"
+          class="menu-item font-semibold text-sm hover:text-yellow-600"
+          >Products</a
+        >
+        <a
+          href="#"
+          class="menu-item font-semibold text-sm hover:text-yellow-600"
+          >Pages</a
+        >
+        <a
+          href="#"
+          class="menu-item font-semibold text-sm hover:text-yellow-600"
+          >Blog</a
+        >
+        <a
+          href="#"
+          class="menu-item font-semibold text-sm hover:text-yellow-600"
+          >Elements</a
+        >
+      </div>
+      <div class="flex-1 flex justify-center">
+        <div class="flex border rounded overflow-hidden">
+          <input
+            type="text"
+            placeholder="Search For Items..."
+            class="px-3 py-1 outline-none"
+          />
+          <select class="bg-gray-100 px-2 text-sm outline-none">
+            <option>All Categories</option>
+          </select>
+          <button class="bg-yellow-500 px-3 text-white">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="relative overflow-hidden bg-gradient-to-br from-yellow-100/30 to-[#23180d] min-h-[500px] flex items-center flex-col"
+    >
+      <!-- Background shapes -->
+      <div class="absolute left-0 top-0 w-full h-full z-0">
+        <img
+          src="https://pngimg.com/d/chili_pepper_PNG27.png"
+          alt="Chili"
+          class="absolute left-10 top-24 w-32 rotate-[-20deg] opacity-90 chilli-1"
+        />
+        <div
+          class="absolute right-0 bottom-0 w-1/2 h-2/3 bg-black/30 rounded-l-full blur-2xl"
+        ></div>
+        <img
+          src="https://pngimg.com/d/chili_pepper_PNG27.png"
+          alt="Chili"
+          class="absolute right-[30rem] bottom-[10rem] w-32 rotate-20 opacity-90 chilli-2"
+        />
+      </div>
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center relative z-10 py-16"
+      >
+        <!-- Text -->
+        <div class="flex-1 text-left space-y-6 p-10 text-container">
+          <div class="text-3xl md:text-4xl font-bold text-white hero-text-1">
+            Super <span class="text-white">Delicious</span>
+          </div>
+          <div
+            class="bg-yellow-200 inline-block px-4 py-2 rounded-lg shadow-lg hero-text-2"
+          >
+            <span
+              class="text-5xl md:text-6xl font-extrabold text-[#23180d] tracking-wider"
+              style="font-family: 'Arial Black', Arial, sans-serif"
+              >ROAST<br />TURKEY</span
+            >
+          </div>
+          <div>
+            <button
+              class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-8 py-3 rounded-full flex items-center gap-2 shadow-lg transition order-button"
+            >
+              <span>Order Now</span>
+              <i class="fa fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Image -->
+        <div
+          class="flex-1 flex justify-center relative mt-10 md:mt-0 image-container"
+        >
+          <img
+            src="./image/roastchicken.png"
+            alt="Roast Turkey"
+            class="w-[300px] md:w-[400px] drop-shadow-2xl z-10 roast-chicken"
+          />
+          <img
+            src="https://pngimg.com/d/chili_pepper_PNG27.png"
+            alt="Chili"
+            class="absolute right-0 bottom-0 w-32 rotate-[20deg] opacity-90 chilli-1"
+          />
+        </div>
+        <div
+          class="absolute bottom-8 right-16 text-white text-sm z-20 text-right"
+        >
+          <div class="flex justify-end gap-3 mb-2">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+          <div>Call Us : 087794908630</div>
+          <div>FastFood.com</div>
+        </div>
+      </div>
+      <!-- Footer Info -->
+
+      <!-- Popular Categories Section -->
+      <section class="bg-white py-16 categories-section w-full">
+        <div class="max-w-5xl mx-auto text-center mb-10">
+          <div class="text-sm font-semibold tracking-widest text-red-500 mb-2">
+            CUSTOMER FAVORITES
+          </div>
+          <h2 class="text-3xl text-4xl font-bold mb-4">Popular Categories</h2>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 cards-container">
+          <!-- Card 1 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 w-48 flex flex-col items-center hover:scale-105 transition category-card"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
+              alt="Main Dish"
+              class="w-16 h-16 mb-4"
+            />
+            <div class="font-semibold text-lg">Main Dish</div>
+            <div class="text-gray-500 text-sm">(86 dishes)</div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 w-48 flex flex-col items-center hover:scale-105 transition category-card"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png"
+              alt="Break Fast"
+              class="w-16 h-16 mb-4"
+            />
+            <div class="font-semibold text-lg">Break Fast</div>
+            <div class="text-gray-500 text-sm">(12 break fast)</div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 w-48 flex flex-col items-center hover:scale-105 transition category-card"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/135/135620.png"
+              alt="Dessert"
+              class="w-16 h-16 mb-4"
+            />
+            <div class="font-semibold text-lg">Dessert</div>
+            <div class="text-gray-500 text-sm">(48 dessert)</div>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 w-48 flex flex-col items-center hover:scale-105 transition category-card"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1046/1046786.png"
+              alt="Browse All"
+              class="w-16 h-16 mb-4"
+            />
+            <div class="font-semibold text-lg">Browse All</div>
+            <div class="text-gray-500 text-sm">(255 Items)</div>
+          </div>
+          <!-- Card 5 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 w-48 flex flex-col items-center hover:scale-105 transition category-card"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
+              alt="Breakfast Food"
+              class="w-16 h-16 mb-4"
+            />
+            <div class="font-semibold text-lg">Breakfast Food</div>
+            <div class="text-gray-500 text-sm">(205 Items)</div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- Daily Best Sells Section -->
+    <section class="bg-white py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center mb-6 animate-section">
+          <h2 class="text-2xl font-bold text-gray-800 daily-best-title">Daily Best Sells</h2>
+          <div class="flex gap-6 text-sm font-semibold filter-buttons">
+            <button class="filter-btn text-green-500 border-b-2 border-green-500 pb-1">
+              Featured
+            </button>
+            <button class="text-gray-500 hover:text-green-500">Popular</button>
+            <button class="text-gray-500 hover:text-green-500">
+              New added
+            </button>
+          </div>
+        </div>
+        <div class="flex gap-6 overflow-x-auto pb-4 product-cards-container">
+          <!-- Promo Card -->
+          <div
+            class="bg-gray-100 rounded-xl p-6 min-w-[260px] flex flex-col justify-between promo-card"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80');
+              background-size: cover;
+            "
+          >
+            <div class="h-40"></div>
+            <div class="text-white text-2xl font-semibold mb-4">
+              Bring nature<br />into your<br />home
+            </div>
+            <button
+              class="bg-red-500 text-white px-4 py-2 rounded font-semibold w-max"
+            >
+              Shop Now &rarr;
+            </button>
+          </div>
+          <!-- Product Card 1 -->
+          <div
+            class="bg-white rounded-xl shadow border p-4 min-w-[220px] flex flex-col product-card"
+          >
+            <div class="flex items-center gap-2 mb-2">
+              <span
+                class="bg-green-100 text-green-600 text-xs font-bold px-2 py-1 rounded"
+                >Save 35%</span
+              >
+            </div>
+            <img
+              src="/image/snack.png"
+              alt="Chicken Meatballs"
+              class="h-[226px] mx-auto object-contain mb-2"
+            />
+            <div class="text-xs text-gray-400 mb-1">Hodo Foods</div>
+            <div class="font-semibold text-gray-800 mb-1 text-sm">
+              All Natural Italian-Style Chicken Meatballs
+            </div>
+            <div class="flex items-end gap-2 mb-2">
+              <span class="text-green-600 font-bold">$238.85</span>
+              <span class="text-gray-400 line-through text-xs">$245.8</span>
+            </div>
+            <div class="text-xs text-gray-500 mb-1">Sold: 90/120</div>
+            <div class="w-full h-2 bg-gray-200 rounded mb-2">
+              <div class="bg-red-400 h-2 rounded" style="width: 75%"></div>
+            </div>
+            <button
+              class="bg-red-500 text-white py-2 rounded font-semibold mt-auto"
+            >
+              Add To Cart
+            </button>
+          </div>
+          <!-- Product Card 2 -->
+          <div
+            class="bg-white rounded-xl shadow border p-4 min-w-[220px] flex flex-col product-card"
+          >
+            <div class="flex items-center gap-2 mb-2">
+              <span
+                class="bg-blue-100 text-blue-600 text-xs font-bold px-2 py-1 rounded"
+                >Sale</span
+              >
+            </div>
+            <img
+              src="/image/coconut.png"
+              alt="Popcorn"
+              class="h-[226px] mx-auto object-contain mb-2"
+            />
+            <div class="text-xs text-gray-400 mb-1">Hodo Foods</div>
+            <div class="font-semibold text-gray-800 mb-1 text-sm">
+              Angie’s Boomchickapop Sweet and wommies
+            </div>
+            <div class="flex items-end gap-2 mb-2">
+              <span class="text-green-600 font-bold">$238.85</span>
+              <span class="text-gray-400 line-through text-xs">$245.8</span>
+            </div>
+            <div class="text-xs text-gray-500 mb-1">Sold: 90/120</div>
+            <div class="w-full h-2 bg-gray-200 rounded mb-2">
+              <div class="bg-red-400 h-2 rounded" style="width: 75%"></div>
+            </div>
+            <button
+              class="bg-red-500 text-white py-2 rounded font-semibold mt-auto"
+            >
+              Add To Cart
+            </button>
+          </div>
+          <!-- Product Card 3 -->
+          <div
+            class="bg-white rounded-xl shadow border p-4 min-w-[220px] flex flex-col product-card"
+          >
+            <div class="flex items-center gap-2 mb-2">
+              <span
+                class="bg-orange-100 text-orange-600 text-xs font-bold px-2 py-1 rounded"
+                >Best sale</span
+              >
+            </div>
+            <img
+              src="/image/veggie.png"
+              alt="Veggie Pops"
+              class="h-[226px] mx-auto object-contain mb-2"
+            />
+            <div class="text-xs text-gray-400 mb-1">Hodo Foods</div>
+            <div class="font-semibold text-gray-800 mb-1 text-sm">
+              Foster Farms Takeout Crispy Classic
+            </div>
+            <div class="flex items-end gap-2 mb-2">
+              <span class="text-green-600 font-bold">$238.85</span>
+              <span class="text-gray-400 line-through text-xs">$245.8</span>
+            </div>
+            <div class="text-xs text-gray-500 mb-1">Sold: 90/120</div>
+            <div class="w-full h-2 bg-gray-200 rounded mb-2">
+              <div class="bg-red-400 h-2 rounded" style="width: 75%"></div>
+            </div>
+            <button
+              class="bg-red-500 text-white py-2 rounded font-semibold mt-auto"
+            >
+              Add To Cart
+            </button>
+          </div>
+          <!-- Product Card 4 -->
+          <div
+            class="bg-white rounded-xl shadow border p-4 min-w-[220px] flex flex-col relative product-card"
+          >
+            <div class="flex items-center gap-2 mb-2">
+              <span
+                class="bg-pink-100 text-pink-600 text-xs font-bold px-2 py-1 rounded"
+                >Save 15%</span
+              >
+            </div>
+            <img
+              src="/image/bean.png"
+              alt="Beans"
+              class="h-[226px] mx-auto object-contain mb-2"
+            />
+            <div class="text-xs text-gray-400 mb-1">Hodo Foods</div>
+            <div class="font-semibold text-gray-800 mb-1 text-sm">
+              Blue Diamond Almonds Lightly Salted
+            </div>
+            <div class="flex items-end gap-2 mb-2">
+              <span class="text-green-600 font-bold">$238.85</span>
+              <span class="text-gray-400 line-through text-xs">$245.8</span>
+            </div>
+            <div class="text-xs text-gray-500 mb-1">Sold: 90/120</div>
+            <div class="w-full h-2 bg-gray-200 rounded mb-2">
+              <div class="bg-red-400 h-2 rounded" style="width: 75%"></div>
+            </div>
+            <button
+              class="bg-red-500 text-white py-2 rounded font-semibold mt-auto"
+            >
+              Add To Cart
+            </button>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow border p-4 min-w-[220px] flex flex-col relative product-card"
+          >
+            <div class="flex items-center gap-2 mb-2">
+              <span
+                class="bg-pink-100 text-pink-600 text-xs font-bold px-2 py-1 rounded"
+                >Save 15%</span
+              >
+            </div>
+            <img
+              src="/image/bean.png"
+              alt="Beans"
+              class="h-[226px] mx-auto object-contain mb-2"
+            />
+            <div class="text-xs text-gray-400 mb-1">Hodo Foods</div>
+            <div class="font-semibold text-gray-800 mb-1 text-sm">
+              Blue Diamond Almonds Lightly Salted
+            </div>
+            <div class="flex items-end gap-2 mb-2">
+              <span class="text-green-600 font-bold">$238.85</span>
+              <span class="text-gray-400 line-through text-xs">$245.8</span>
+            </div>
+            <div class="text-xs text-gray-500 mb-1">Sold: 90/120</div>
+            <div class="w-full h-2 bg-gray-200 rounded mb-2">
+              <div class="bg-red-400 h-2 rounded" style="width: 75%"></div>
+            </div>
+            <button
+              class="bg-red-500 text-white py-2 rounded font-semibold mt-auto"
+            >
+              Add To Cart
+            </button>
+          </div>
+    </section>
+    <!-- Special Dishes Section -->
+<section class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between items-center mb-8">
+      <div>
+        <div class="text-xs font-semibold tracking-widest text-red-400 mb-2 uppercase">Special Dishes</div>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+          Standout Dishes<br>From Our Menu
+        </h2>
+      </div>
+      <div class="flex gap-3">
+        <button class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-xl text-gray-500 hover:bg-gray-200">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <button class="w-9 h-9 rounded-full bg-red-500 flex items-center justify-center text-xl text-white hover:bg-red-600">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="flex flex-wrap gap-6 justify-center">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 w-fit relative flex flex-col items-center">
+        <div class="absolute top-0 right-0 m-3">
+          <div class="bg-red-500 rounded-lg p-2">
+            <i class="fa fa-heart text-white"></i>
+          </div>
+        </div>
+        <img src="/image/dish1.png" alt="Fattoush salad" class="w-[276px] h-[278px]  object-cover rounded-full mb-4 shadow" />
+        <div class="font-bold text-lg text-gray-900 mb-1">Fattoush salad</div>
+        <div class="text-gray-500 text-sm">Description of the item</div>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 w-fit relative flex flex-col items-center">
+        <div class="absolute top-0 right-0 m-3">
+          <div class="bg-red-500 rounded-lg p-2 custom-rounded">
+            <i class="fa fa-heart text-white"></i>
+          </div>
+        </div>
+        <img src="/image/dish2.png" class="w-[276px] h-[278px]  object-cover rounded-full mb-4 shadow" />
+        <div class="font-bold text-lg text-gray-900 mb-1">Vegetable salad</div>
+        <div class="text-gray-500 text-sm">Description of the item</div>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 w-fit relative flex flex-col items-center">
+        <div class="absolute top-0 right-0 m-3">
+          <div class="bg-red-500 rounded-lg p-2">
+            <i class="fa fa-heart text-white"></i>
+          </div>
+        </div>
+        <img src="/image/dish3.png" alt="Egg vegi salad" class="w-[276px] h-[278px] object-cover rounded-full mb-4 shadow" />
+        <div class="font-bold text-lg text-gray-900 mb-1">Egg vegi salad</div>
+        <div class="text-gray-500 text-sm">Description of the item</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Deals Of The Day Section -->
+<section class="bg-white py-12">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold text-gray-800">Deals Of The Day</h2>
+      <a href="#" class="text-gray-500 text-sm hover:text-green-500 flex items-center gap-1">
+        All Deals <i class="fa fa-chevron-right text-xs"></i>
+      </a>
+    </div>
+    <div class="flex gap-6 overflow-x-auto pb-4 justify-center items-center">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow border w-64 flex-shrink-0">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Seeds of Change" class="w-full h-36 object-cover rounded-t-xl" />
+        <div class="p-4">
+          <div class="font-semibold text-gray-800 text-sm mb-1">Seeds of Change Organic Quinoa, Brown, & Red Rice</div>
+          <div class="text-xs text-gray-400 mb-1 flex items-center gap-1">
+            <span class="text-yellow-400"><i class="fa fa-star"></i></span> 4.0
+            <span class="ml-2">By NestFood</span>
+          </div>
+          <div class="flex items-center justify-between mt-3">
+            <div>
+              <span class="text-green-600 font-bold">$32.85</span>
+              <span class="text-gray-400 line-through text-xs ml-1">$33.8</span>
+            </div>
+            <button class="bg-red-500 text-white px-4 py-1 rounded font-semibold text-sm flex items-center gap-1">
+              <i class="fa fa-shopping-cart"></i> Add
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow border w-64 flex-shrink-0">
+        <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" alt="Perdue Simply Smart" class="w-full h-36 object-cover rounded-t-xl" />
+        <div class="p-4">
+          <div class="font-semibold text-gray-800 text-sm mb-1">Perdue Simply Smart Organics Gluten Free</div>
+          <div class="text-xs text-gray-400 mb-1 flex items-center gap-1">
+            <span class="text-yellow-400"><i class="fa fa-star"></i></span> 4.0
+            <span class="ml-2">By Old El Paso</span>
+          </div>
+          <div class="flex items-center justify-between mt-3">
+            <div>
+              <span class="text-green-600 font-bold">$24.85</span>
+              <span class="text-gray-400 line-through text-xs ml-1">$26.8</span>
+            </div>
+            <button class="bg-red-500 text-white px-4 py-1 rounded font-semibold text-sm flex items-center gap-1">
+              <i class="fa fa-shopping-cart"></i> Add
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl shadow border w-64 flex-shrink-0">
+        <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Signature Wood-Fired" class="w-full h-36 object-cover rounded-t-xl" />
+        <div class="p-4">
+          <div class="font-semibold text-gray-800 text-sm mb-1">Signature Wood-Fired Mushroom and Caramelized</div>
+          <div class="text-xs text-gray-400 mb-1 flex items-center gap-1">
+            <span class="text-yellow-400"><i class="fa fa-star"></i></span> 3.0
+            <span class="ml-2">By Progresso</span>
+          </div>
+          <div class="flex items-center justify-between mt-3">
+            <div>
+              <span class="text-green-600 font-bold">$12.85</span>
+              <span class="text-gray-400 line-through text-xs ml-1">$13.8</span>
+            </div>
+            <button class="bg-red-500 text-white px-4 py-1 rounded font-semibold text-sm flex items-center gap-1">
+              <i class="fa fa-shopping-cart"></i> Add
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="bg-white rounded-xl shadow border w-64 flex-shrink-0">
+        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Simply Lemonade" class="w-full h-36 object-cover rounded-t-xl" />
+        <div class="p-4">
+          <div class="font-semibold text-gray-800 text-sm mb-1">Simply Lemonade with Raspberry Juice</div>
+          <div class="text-xs text-gray-400 mb-1 flex items-center gap-1">
+            <span class="text-yellow-400"><i class="fa fa-star"></i></span> 3.0
+            <span class="ml-2">By Yoplait</span>
+          </div>
+          <div class="flex items-center justify-between mt-3">
+            <div>
+              <span class="text-green-600 font-bold">$15.85</span>
+              <span class="text-gray-400 line-through text-xs ml-1">$16.8</span>
+            </div>
+            <button class="bg-red-500 text-white px-4 py-1 rounded font-semibold text-sm flex items-center gap-1">
+              <i class="fa fa-shopping-cart"></i> Add
+              </button>
+            </section>
+            <!-- Why People Choose Us Section -->
+      <section class="bg-white py-16">
+        <div class="max-w-6xl  mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+          <!-- Image -->
+          <div class="flex-shrink-0">
+            <img src="/image/dish2.png" alt="Salad" class="rounded-2xl w-[350px] h-[350px] object-cover shadow" />
+          </div>
+          <!-- Content -->
+          <div class="flex-1">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Why People Choose us?</h2>
+            <div class="space-y-6">
+              <!-- Card 1 -->
+              <div class="flex items-start bg-white rounded-xl shadow p-5 gap-4">
+                <div class="bg-orange-100 rounded-full p-3 flex items-center justify-center">
+                  <i class="fa fa-truck text-2xl text-orange-500"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-lg text-gray-900">Convenient and Reliable</div>
+                  <div class="text-gray-500 text-sm">
+                    Whether you dine in, take out, or order delivery, our service is convenient, fast, and reliable, making mealtime hassle-free.
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="flex items-start bg-white rounded-xl shadow p-5 gap-4">
+                <div class="bg-yellow-100 rounded-full p-3 flex items-center justify-center">
+                  <i class="fa fa-utensils text-2xl text-yellow-500"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-lg text-gray-900">Variety of Options</div>
+                  <div class="text-gray-500 text-sm">
+                    From hearty meals to light snacks, we offer a wide range of options to suit every taste and craving.
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="flex items-start bg-white rounded-xl shadow p-5 gap-4">
+                <div class="bg-orange-100 rounded-full p-3 flex items-center justify-center">
+                  <i class="fa fa-hamburger text-2xl text-orange-500"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-lg text-gray-900">Eat Burger</div>
+                  <div class="text-gray-500 text-sm">
+                    Our burgers are grilled to perfection, with juicy patties and flavorful toppings that make every bite a delicious experience.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+            <!-- Promo Banner & Features Section -->
+      <section class="bg-white py-8">
+        <div class="max-w-7xl mx-auto px-4">
+          <!-- Banner -->
+          <div class="rounded-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-[#b6a97e] to-[#23231b] p-8 mb-6 relative">
+            <!-- Left Content -->
+            <div class="flex-1 text-white z-10">
+              <h2 class="text-2xl md:text-3xl font-bold mb-2">Stay home & get your daily<br>needs from our shop</h2>
+              <div class="mb-6 text-green-100 text-sm">Start Your Daily Shopping with <span class="text-green-300 font-semibold">Nest Mart</span></div>
+              <form class="flex max-w-md">
+                <div class="flex bg-white rounded-full overflow-hidden w-full">
+                  <span class="flex items-center px-3 text-gray-400">
+                    <i class="fa fa-paper-plane"></i>
+                  </span>
+                  <input type="email" placeholder="Your email address" class="flex-1 px-2 py-2 outline-none text-gray-700" />
+                  <button type="submit" class="bg-red-400 hover:bg-red-500 text-white px-6 py-2 font-semibold rounded-full transition">Subscribe</button>
+                </div>
+              </form>
+            </div>
+            <!-- Right Image -->
+            <div class="flex-1 flex items-center justify-end relative mt-8 md:mt-0">
+              <img src="/image/banner-delivery.png" alt="Delivery" class="w-[320px] md:w-[370px] object-contain z-10" />
+              <!-- Floating veggies/fruits -->
+              <img src="/image/veggie1.png" class="absolute left-0 top-10 w-16 hidden md:block" alt="Veggie" />
+              <img src="/image/veggie2.png" class="absolute left-20 top-0 w-14 hidden md:block" alt="Veggie" />
+              <img src="/image/veggie3.png" class="absolute right-24 top-16 w-14 hidden md:block" alt="Veggie" />
+              <img src="/image/veggie4.png" class="absolute right-10 bottom-10 w-16 hidden md:block" alt="Veggie" />
+            </div>
+          </div>
+          <!-- Features -->
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+            <!-- Feature 1 -->
+            <div class="bg-gray-50 rounded-xl p-5 flex items-center gap-4">
+              <div class="text-green-500 text-2xl">
+                <i class="fa fa-money-bill-wave"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800 text-sm">Best prices & offers</div>
+                <div class="text-xs text-gray-500">Orders $50 or more</div>
+              </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-gray-50 rounded-xl p-5 flex items-center gap-4">
+              <div class="text-green-500 text-2xl">
+                <i class="fa fa-shipping-fast"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800 text-sm">Free delivery</div>
+                <div class="text-xs text-gray-500">24/7 amazing services</div>
+              </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-gray-50 rounded-xl p-5 flex items-center gap-4">
+              <div class="text-yellow-500 text-2xl">
+                <i class="fa fa-gift"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800 text-sm">Great daily deal</div>
+                <div class="text-xs text-gray-500">When you sign up</div>
+              </div>
+            </div>
+            <!-- Feature 4 -->
+            <div class="bg-gray-50 rounded-xl p-5 flex items-center gap-4">
+              <div class="text-green-500 text-2xl">
+                <i class="fa fa-th-large"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800 text-sm">Wide assortment</div>
+                <div class="text-xs text-gray-500">Mega Discounts</div>
+              </div>
+            </div>
+            <!-- Feature 5 -->
+            <div class="bg-gray-50 rounded-xl p-5 flex items-center gap-4">
+              <div class="text-green-500 text-2xl">
+                <i class="fa fa-undo"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800 text-sm">Easy returns</div>
+                <div class="text-xs text-gray-500">Within 30 days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+            <!-- Footer Section -->
+      <footer class=" pt-10 pb-4 bg-white">
+        <div class="bg-gray-50 rounded-t-2xl max-w-7xl mx-auto px-4 py-10">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Brand & Info -->
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <img src="https://i.ibb.co/3y7Qw1K/foodzy-logo.png" alt="Foodzy" class="w-10 h-10 rounded-full" />
+                <div>
+                  <div class="font-bold text-lg">Foodzy</div>
+                  <div class="text-xs text-gray-500 -mt-1">A Treasure of Tastes</div>
+                </div>
+              </div>
+              <div class="text-gray-500 text-sm mb-4">
+                FoodTrove is the biggest market of grocery products. Get your daily needs from our store.
+              </div>
+              <div class="flex items-start gap-2 text-gray-500 text-sm mb-1">
+                <i class="fa fa-map-marker-alt text-red-400 mt-1"></i>
+                51 Green St.Huntington ohaio beach ontario, NY 11746 KY 4783, USA.
+              </div>
+              <div class="flex items-center gap-2 text-gray-500 text-sm mb-1">
+                <i class="fa fa-envelope text-yellow-500"></i>
+                example@email.com
+              </div>
+              <div class="flex items-center gap-2 text-gray-500 text-sm">
+                <i class="fa fa-phone text-green-500"></i>
+                +91 123 4567890
+              </div>
+            </div>
+            <!-- Company -->
+            <div>
+              <div class="font-semibold mb-3">Company</div>
+              <ul class="space-y-2 text-gray-600 text-sm">
+                <li><a href="#" class="hover:text-yellow-600">About Us</a></li>
+                <li><a href="#" class="hover:text-yellow-600">Delivery Information</a></li>
+                <li><a href="#" class="hover:text-yellow-600">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-yellow-600">Terms & Conditions</a></li>
+                <li><a href="#" class="hover:text-yellow-600">contact Us</a></li>
+                <li><a href="#" class="hover:text-yellow-600">Support Center</a></li>
+              </ul>
+            </div>
+            <!-- Category -->
+            <div>
+              <div class="font-semibold mb-3">Category</div>
+              <ul class="space-y-2 text-gray-600 text-sm">
+                <li>Dairy & Bakery</li>
+                <li>Fruits & Vegetable</li>
+                <li>Snack & Spice</li>
+                <li>Juice & Drinks</li>
+                <li>Chicken & Meat</li>
+                <li>Fast Food</li>
+              </ul>
+            </div>
+            <!-- Newsletter -->
+            <div>
+              <div class="font-semibold mb-3">Subscribe Our Newsletter</div>
+              <form class="flex mb-3">
+                <input type="text" placeholder="Search here.." class="flex-1 px-3 py-2 rounded-l border border-gray-200 outline-none text-sm" />
+                <button type="submit" class="bg-gray-900 text-white px-4 rounded-r">
+                  <i class="fa fa-paper-plane"></i>
+                </button>
+              </form>
+              <div class="flex gap-3 mb-3">
+                <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-200 rounded hover:bg-gray-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-200 rounded hover:bg-gray-300"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-200 rounded hover:bg-gray-300"><i class="fab fa-instagram"></i></a>
+              </div>
+              <div class="flex gap-2">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" class="w-10 h-10 rounded object-cover" />
+                <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" class="w-10 h-10 rounded object-cover" />
+                <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" class="w-10 h-10 rounded object-cover" />
+                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" class="w-10 h-10 rounded object-cover" />
+                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" class="w-10 h-10 rounded object-cover" />
+              </div>
+            </div>
+          </div>
+          <hr class="my-6 border-gray-200" />
+          <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <div>
+              © 2025 <span class="text-red-500 font-semibold">Foodzy</span>,
+
+
+    <script src="node_modules/gsap/dist/all.js"></script>
+    <script src="animation.js"></script>
+    <script src="node_modules/gsap/dist/ScrollTrigger.min.js"></script>
+  </body>
+</html>
