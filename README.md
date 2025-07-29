@@ -24,7 +24,7 @@ MIT License. Basically, use and modify as you wish but give me some credit. My m
 
 ## Contact
 
-Questions? Just wanna chat? Hit me up at myemailisreal@gmail.com. I'll reply when I get around to it.
+Questions? Just wanna chat? Hit me up at faridmu851@gmail.com. I'll reply when I get around to it.
 
 ---
 Crafted with procrastination and a special blend of confusion and determination.
